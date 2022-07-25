@@ -18,7 +18,7 @@ class PaginatedData
     ) {
     }
 
-    public static function create(array $results, int $count, PaginationDto $pagination): self
+    public static function create(array $results, int $count, PaginationDto $pagination): static
     {
         return new self($results, $count, $pagination);
     }
