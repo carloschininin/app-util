@@ -6,10 +6,13 @@ namespace CarlosChininin\AppUtil\Dto\Transformer;
 
 abstract class AbstractDtoTransformer implements DtoTransformerInterface
 {
-    public function transformFromObjects(iterable $objects): iterable
+    public function transformFromObjects(iterable|null $objects): iterable
     {
-        $dto = [];
+        if (null === $objects) {
+            return [];
+        }
 
+        $dto = [];
         foreach ($objects as $object) {
             $dto[] = $this->transformFromObject($object);
         }
