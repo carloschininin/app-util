@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.3",
-        "symfony/http-foundation": "^7.0",
+        "symfony/http-foundation": "^7.0|^8.0",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
